@@ -1,0 +1,33 @@
+body{
+    font-family: Open Sans, Arial, sans-serif;
+}
+
+#table thead th{
+    background-color: #CBD6E2;
+    color: #221F4D;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+#table tbody td{
+    color: #221F4D;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px 15px;
+}
+
+#table tbody tr.odd:hover td, #table tbody tr.even:hover td {
+    border-top: 1px solid #0F5EF0;
+    border-bottom: 1px solid #0F5EF0;
+    background-color: #E7EFFD;
+}
+
+#table tbody tr.odd {
+    background-color: #ffffff;
+}
+
+#table tbody tr.even {
+    background-color: #f5f8fa;
+}
+

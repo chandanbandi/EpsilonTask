@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style/Table.css"/>
+    <title>Table Task</title>
+    
+</head>
+<body>
+    <section class="container pt-5">
+     <table id="table" class="display table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+    </table>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function(){
+               
+         $('#table').DataTable({
+            "processing" : true,
+             "aaSorting": [],
+            "ajax" : {
+                "url" : "http://usweb.dotomi.com/resources/swfs/cookies.json",
+                dataSrc : ''
+            },
+            "columns" : [ {
+                "data" : "name"
+            }, {
+                "data" : "price"
+            }, {
+                "data" : "category"
+            }]
+        });
+    });
+    </script>
+    
+</body>
+</html>
